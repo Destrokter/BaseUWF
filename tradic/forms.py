@@ -5,5 +5,5 @@ class TradicForm(ModelForm):
 
     class Meta:
         model = Tradic
-        fields =['name', 'birthday', 'rang', 'agegroup', 'gender', 'city_region', 'catquan',
+        fields =['measure','name', 'birthday', 'rang', 'agegroup', 'gender', 'city_region', 'catquan',
                  'catqise',  'duilian', 'trener']

@@ -5,6 +5,6 @@ class TaoluForm(ModelForm):
     
     class Meta:
         model = Taolu
-        fields =['name', 'birthday', 'rang', 'agegroup', 'gender', 'city_region', 'catquan',
+        fields =['measure','name', 'birthday', 'rang', 'agegroup', 'gender', 'city_region', 'catquan',
                   'catduanqise', 'catchanqise', 'duilian', 'trener']
        

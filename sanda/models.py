@@ -63,6 +63,7 @@ class Sanda(models.Model):
         ('ЗМСУ', 'ЗМСУ'),
     ]
 
+    measure = models.CharField('Назва заходу', max_length=100, default=None)
     name = models.CharField('ПІБ', max_length=50)
     birthday = models.DateField('Дата народження')
     rang = models.CharField('Розряд',max_length=20, choices=RANG_CHOICES, default=None, blank=True)
