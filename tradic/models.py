@@ -54,6 +54,7 @@ class Tradic(models.Model):
     catqise = models.CharField('Категорія зброї', max_length=20, choices=CATQISE_CHOICES, default=None, blank=True)
     duilian = models.CharField('Дуйлянь',max_length=50, blank=True)
     trener = models.CharField('Тренер',max_length=50)
+    note = models.CharField('Примітки', max_length=100, default=None)
 
 
     def __str__(self):

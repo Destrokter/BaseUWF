@@ -73,6 +73,7 @@ class Sanda(models.Model):
     part = models.CharField('Розділ',max_length=20, choices=PART_CHOICES, default=None)
     weightcat = models.CharField('Вагова категорія', max_length=20, choices=WEIGHTCAT_CHOICES, default=None)
     trener = models.CharField('Тренер',max_length=50)
+    note = models.CharField('Примітки', max_length=100, default=None)
 
 
     def __str__(self):

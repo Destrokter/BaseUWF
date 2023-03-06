@@ -65,6 +65,7 @@ class Taolu(models.Model):
     # nangun = models.CharField('Нань гунь',max_length=50, blank=True)
     duilian = models.CharField('Дуйлянь',max_length=50, blank=True)
     trener = models.CharField('Тренер',max_length=50)
+    note = models.CharField('Примітки', max_length=100, default=None)
 
 
     def __str__(self):

@@ -79,6 +79,7 @@ main .features h6 {margin-left: 180px; text-align: center; font-size: 25px;}
 main .features p2 {display:block; text-align: left; max-width: 400px; padding-left: 150px; margin: 0px auto;}
 main .features p3 {display:block; text-align: left; max-width: 400px; padding-left: 100px; margin: 0px auto; margin-right: 322px; font-size: 25px;}
 main .features p4 {display:block; text-align: left; max-width: 400px; padding-left: 270px; margin: 0px auto; margin-right: 0px; font-size: 12px;}
+main .features p6 {display:block; text-align: center; max-width: 400px; padding-left: 180px; margin: 0px auto; margin-top: 20px; margin-left: 385px; font-size: 20px;}
 
 .alert-secondary {
     

@@ -6,5 +6,5 @@ class SandaForm(ModelForm):
     class Meta:
         model = Sanda
         fields =['measure','name', 'birthday', 'rang', 'agegroup', 'gender', 'city_region', 'part',
-                  'weightcat','trener']
+                  'weightcat','trener', 'note']
         
