@@ -3,6 +3,8 @@ body {
      background: #d5d4d4a4
 }
 
+
+
 aside {
     float: right;
     background: #A9A9A9;
@@ -216,7 +218,9 @@ input[type="text"] {
 div.container {
     margin-left: 100px;
     height: 10em;
-    position: relative }
+    position: relative;
+   
+ }
 
 .form-buttons {
     
@@ -230,3 +234,13 @@ div.container {
 .form-error{
     margin-left:200px;
 }
+.c {
+    margin-left:10px;
+}
+.last{
+    list-style-type: none;
+    margin-left:200px;
+    font-size: 20px;
+    font-family: Tahoma;
+}
+

@@ -18,7 +18,12 @@
                 <div class="alert alert-secondary">
                     <h3>{{ sp.name}}</h3>
                     <p>{{ sp.city_region}}</p>
+                    <p>{{ sp.representative}}</p>
+                    {% if request.user == sp.representative %}
                     <a href='{% url 'allbasedetail' sp.id %}' class='btn btn-secondary'>Докладніше</a>
+                    {% else %}
+                    Не має доступу
+                    {% endif %}
                 </div>
             {% endfor %}
         {% else %}

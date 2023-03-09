@@ -1,5 +1,7 @@
 from django.db import models
 from datetime import datetime
+from allbase.models import Allbase
+from django.contrib.auth.models import User
 
 class Tradic(models.Model):
 
@@ -42,9 +44,10 @@ class Tradic(models.Model):
         ('МСМКУ', 'МСМКУ'),
         ('ЗМСУ', 'ЗМСУ'),
     ]
-    
+
+    representative = models.ForeignKey(User, on_delete= models.CASCADE, verbose_name='Представник', blank=True, null=True)
     measure = models.CharField('Назва заходу', max_length=100, default=None)
-    name = models.CharField('ПІБ', max_length=50)
+    name = models.ForeignKey(Allbase, on_delete=models.PROTECT, verbose_name='ПІБ')
     birthday = models.DateField('Дата народження')
     rang = models.CharField('Розряд',max_length=20, choices=RANG_CHOICES, default=None, blank=True)
     agegroup = models.CharField('Вікова група',max_length=20, choices=AGEGROUP_CHOICES, default=None)
@@ -54,11 +57,11 @@ class Tradic(models.Model):
     catqise = models.CharField('Категорія зброї', max_length=20, choices=CATQISE_CHOICES, default=None, blank=True)
     duilian = models.CharField('Дуйлянь',max_length=50, blank=True)
     trener = models.CharField('Тренер',max_length=50)
-    note = models.CharField('Примітки', max_length=100, default=None)
+    note = models.CharField('Примітки', max_length=100, default=None, blank=True)
 
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
     def get_absolute_url(self):
         return f'/tradic/{self.id}'

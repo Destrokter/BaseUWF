@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 from django.db.models import Q
+from django.contrib.auth.models import User
 
 class Allbase(models.Model):
 
@@ -68,7 +69,7 @@ class Allbase(models.Model):
         ('МСМКУ', 'МСМКУ'),
         ('ЗМСУ', 'ЗМСУ'),
     ]
-
+    representative = models.ForeignKey(User, on_delete= models.CASCADE, verbose_name='Представник', blank=True, null=True)
     name = models.CharField('ПІБ', max_length=50)
     birthday = models.DateField('Дата народження')
     rang = models.CharField('Розряд',max_length=20, choices=RANG_CHOICES, default=None, blank=True)
@@ -81,7 +82,7 @@ class Allbase(models.Model):
 
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
     def get_absolute_url(self):
         return f'/allbase/{self.id}'

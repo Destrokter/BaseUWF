@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
     <link rel="shortcut icon" href="{% static 'main/img/photo1674988185.jpeg' %}" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=no">
 </head>
 
 
@@ -27,12 +28,9 @@
             <a href="{% url 'taolu' %}"><li>Заявки таолу</li></a>
             <a href="{% url 'sanda' %}"><li>Заявки контактні види</li></a>
             <a href="{% url 'tradic' %}"><li>Заявки традиційні комплекси</li></a>
-            {% if request.user.is_authenticated %}
-				<li class="last"> {{user.username}}  <a href="{% url 'logout' %}">Вийти</a></li>
-				{% else %}
-				<li class="last"><a href="{% url 'register' %}">Реєстрація</a>
-                <a href="{% url 'login' %}">Увійти</a></li>
-				{% endif %}
+            
+
+         
         </ul>
 
     </aside>

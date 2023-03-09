@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.allbase, name='allbase'),
-    path('allbasecreate', views.allbasecreate, name='allbasecreate'),
+    path('allbasecreate', views.Allbasecreate.as_view(), name='allbasecreate'),
     path('<int:pk>', views.AllbaseDetailView.as_view(), name='allbasedetail'),
     path('<int:pk>/update>', views.AllbaseUpdateView.as_view(), name='allbaseupdate'),
     path('<int:pk>/delete>', views.AllbaseDeleteView.as_view(), name='allbasedelete'),
